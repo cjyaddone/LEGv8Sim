@@ -1,0 +1,79 @@
+NOP
+PUTCHAR X0
+PUTINT X0
+B target
+BL target
+BR X0
+B.EQ target
+B.NE target
+B.LT target
+B.LE target
+B.GT target
+B.GE target
+B.LO target
+B.CC target
+B.LS target
+B.HI target
+B.HS target
+B.CS target
+B.MI target
+B.PL target
+B.VS target
+B.VC target
+CBZ X0, target
+CBNZ X0, target
+STURB X0, [X1, #0]
+LDURB X0, [X1, #0]
+STURH X0, [X1, #0]
+LDURH X0, [X1, #0]
+STURW X0, [X1, #0]
+LDURSW X0, [X1, #0]
+STXR X0, X1, [X2]
+LDXR X0, [X1, #0]
+STUR X0, [X1, #0]
+LDUR X0, [X1, #0]
+AND X0, X1, X2
+ADD X0, X1, X2
+ORR X0, X1, X2
+EOR X0, X1, X2
+SUB X0, X1, X2
+ORRI X0, X1, #1
+EORI X0, X1, #1
+ADDI X0, X1, #1
+ANDI X0, X1, #1
+SUBI X0, X1, #1
+ADDS X0, X1, X2
+ANDS X0, X1, X2
+SUBS X0, X1, X2
+ADDIS X0, X1, #1
+SUBIS X0, X1, #1
+ANDIS X0, X1, #1
+LSR X0, X1, #1
+LSL X0, X1, #1
+MOVZ X0, #1, LSL #0
+MOVK X0, #1, LSL #16
+MUL X0, X1, X2
+UMULH X0, X1, X2
+SMULH X0, X1, X2
+SDIV X0, X1, X2
+UDIV X0, X1, X2
+FADDS S0, S1, S2
+FSUBS S0, S1, S2
+FCMPS S1, S2
+FMULS S0, S1, S2
+FDIVS S0, S1, S2
+LDURS S0, [X1, #0]
+STURS S0, [X1, #0]
+FADDD D0, D1, D2
+FSUBD D0, D1, D2
+FCMPD D1, D2
+FMULD D0, D1, D2
+FDIVD D0, D1, D2
+LDURD D0, [X1, #0]
+STURD D0, [X1, #0]
+CMP X1, X2
+CMPI X1, #1
+MOV X0, X1
+LDA X0, data_label
+target: NOP
+STOP
